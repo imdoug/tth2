@@ -1,0 +1,320 @@
+{
+    "Alaska": {
+        "state": "AK",
+        "state_name": "Alaska",
+        "number_of_diagnosed_hf_patients": "2,669",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Alabama": {
+        "state": "AL",
+        "state_name": "Alabama",
+        "number_of_diagnosed_hf_patients": "85,865",
+        "percent_of_patients_on_sglt2i":"17"
+    },
+    "Arkansas": {
+        "state": "AR",
+        "state_name": "Arkansas",
+        "number_of_diagnosed_hf_patients": "36,335",
+        "percent_of_patients_on_sglt2i":"20"
+    },
+    "Arizona": {
+        "state": "AZ",
+        "state_name": "Arizona",
+        "number_of_diagnosed_hf_patients": "67,048",
+        "percent_of_patients_on_sglt2i":"16"
+    },
+    "California": {
+        "state": "CA",
+        "state_name": "California",
+        "number_of_diagnosed_hf_patients": "454,096",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "Colorado": {
+        "state": "CO",
+        "state_name": "Colorado",
+        "number_of_diagnosed_hf_patients": "33,998",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Connecticut": {
+        "state": "CT",
+        "state_name": "Connecticut",
+        "number_of_diagnosed_hf_patients": "32,131",
+        "percent_of_patients_on_sglt2i":"25"
+    },
+    "District_of_Columbia": {
+        "state": "DC",
+        "state_name": "District of Columbia",
+        "number_of_diagnosed_hf_patients": "8,181",
+        "percent_of_patients_on_sglt2i":"22"
+    },
+    "Delaware": {
+        "state": "DE",
+        "state_name": "Delaware",
+        "number_of_diagnosed_hf_patients": "12,832",
+        "percent_of_patients_on_sglt2i":"23"
+    },
+    "Florida": {
+        "state": "FL",
+        "state_name": "Florida",
+        "number_of_diagnosed_hf_patients": "439,048",
+        "percent_of_patients_on_sglt2i":"13"
+    },
+    "Georgia": {
+        "state": "GA",
+        "state_name": "Georgia",
+        "number_of_diagnosed_hf_patients": "148,662",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Hawaii": {
+        "state": "HI",
+        "state_name": "Hawaii",
+        "number_of_diagnosed_hf_patients": "11,231",
+        "percent_of_patients_on_sglt2i":"13"
+    },
+    "Iowa": {
+        "state": "IA",
+        "state_name": "Iowa",
+        "number_of_diagnosed_hf_patients": "29,755",
+        "percent_of_patients_on_sglt2i":"16"
+    },
+    "Idaho": {
+        "state": "ID",
+        "state_name": "Idaho",
+        "number_of_diagnosed_hf_patients": "932",
+        "percent_of_patients_on_sglt2i":"22"
+    },
+    "Illinois": {
+        "state": "IL",
+        "state_name": "Illinois",
+        "number_of_diagnosed_hf_patients": "102,147",
+        "percent_of_patients_on_sglt2i":"22"
+    },
+    "Indiana": {
+        "state": "IN",
+        "state_name": "Indiana",
+        "number_of_diagnosed_hf_patients": "74,467",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Kansas": {
+        "state": "KS",
+        "state_name": "Kansas",
+        "number_of_diagnosed_hf_patients": "30,030",
+        "percent_of_patients_on_sglt2i":"17"
+    },
+    "Kentucky": {
+        "state": "KY",
+        "state_name": "Kentucky",
+        "number_of_diagnosed_hf_patients": "69,269",
+        "percent_of_patients_on_sglt2i":"22"
+    },
+    "Lousiana": {
+        "state": "LA",
+        "state_name": "Louisiana",
+        "number_of_diagnosed_hf_patients": "92,354",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "Massachusetts_3_": {
+        "state": "MA",
+        "state_name": "Massachusetts",
+        "number_of_diagnosed_hf_patients": "55,345",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Maryland": {
+        "state": "MD",
+        "state_name": "Maryland",
+        "number_of_diagnosed_hf_patients": "56,808",
+        "percent_of_patients_on_sglt2i":"16"
+    },
+    "Maine_3_": {
+        "state": "ME",
+        "state_name": "Maine",
+        "number_of_diagnosed_hf_patients": "22,809",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Michigan_3_": {
+        "state": "MI",
+        "state_name": "Michigan",
+        "number_of_diagnosed_hf_patients": "146,112",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Minnesota": {
+        "state": "MN",
+        "state_name": "Minnesota",
+        "number_of_diagnosed_hf_patients": "34,421",
+        "percent_of_patients_on_sglt2i":"15"
+    },
+    "Missouri": {
+        "state": "MO",
+        "state_name": "Missouri",
+        "number_of_diagnosed_hf_patients": "65,530",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "Mississippi": {
+        "state": "MS",
+        "state_name": "Mississippi",
+        "number_of_diagnosed_hf_patients": "32,857",
+        "percent_of_patients_on_sglt2i":"25"
+    },
+    "Montana": {
+        "state": "MT",
+        "state_name": "Montana",
+        "number_of_diagnosed_hf_patients": "5,610",
+        "percent_of_patients_on_sglt2i":"20"
+    },
+    "North_Carolina": {
+        "state": "NC",
+        "state_name": "North Carolina",
+        "number_of_diagnosed_hf_patients": "85,947",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "North_Dakota": {
+        "state": "ND",
+        "state_name": "North Dakota",
+        "number_of_diagnosed_hf_patients": "5,379",
+        "percent_of_patients_on_sglt2i":"12"
+    },
+    "Nebraska": {
+        "state": "NE",
+        "state_name": "Nebraska",
+        "number_of_diagnosed_hf_patients": "23,523",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "New_Hampshire_1_": {
+        "state": "NH",
+        "state_name": "New Hampshire",
+        "number_of_diagnosed_hf_patients": "9,802",
+        "percent_of_patients_on_sglt2i":"16"
+    },
+    "New_Jersey": {
+        "state": "NJ",
+        "state_name": "New Jersey",
+        "number_of_diagnosed_hf_patients": "126,678",
+        "percent_of_patients_on_sglt2i":"15"
+    },
+    "New_Mexico_1_": {
+        "state": "NM",
+        "state_name": "New Mexico",
+        "number_of_diagnosed_hf_patients": "11,231",
+        "percent_of_patients_on_sglt2i":"13"
+    },
+    "Nevada": {
+        "state": "NV",
+        "state_name": "Nevada",
+        "number_of_diagnosed_hf_patients": "36,572",
+        "percent_of_patients_on_sglt2i":"15"
+    },
+    "New_York": {
+        "state": "NY",
+        "state_name": "New York",
+        "number_of_diagnosed_hf_patients": "240,098",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "Ohio": {
+        "state": "OH",
+        "state_name": "Ohio",
+        "number_of_diagnosed_hf_patients": "179,569",
+        "percent_of_patients_on_sglt2i":"20"
+    },
+    "Oklahoma": {
+        "state": "OK",
+        "state_name": "Oklahoma",
+        "number_of_diagnosed_hf_patients": "35,683",
+        "percent_of_patients_on_sglt2i":"15"
+    },
+    "Oregon": {
+        "state": "OR",
+        "state_name": "Oregon",
+        "number_of_diagnosed_hf_patients": "34,736",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Pennsylvania": {
+        "state": "PA",
+        "state_name": "Pennsylvania",
+        "number_of_diagnosed_hf_patients": "133,574",
+        "percent_of_patients_on_sglt2i":"20"
+    },
+    "Puerto_Rico": {
+        "state": "PR",
+        "state_name": "Puerto Rico",
+        "number_of_diagnosed_hf_patients": "20,547",
+        "percent_of_patients_on_sglt2i":"9"
+    },
+    "Rhode_Island": {
+        "state": "RI",
+        "state_name": "Rhode Island",
+        "number_of_diagnosed_hf_patients": "10,925",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "South_Carolina": {
+        "state": "SC",
+        "state_name": "South Carolina",
+        "number_of_diagnosed_hf_patients": "62,292",
+        "percent_of_patients_on_sglt2i":"18"
+    },
+    "South_Dakota_1_": {
+        "state": "SD",
+        "state_name": "South Dakota",
+        "number_of_diagnosed_hf_patients": "4,652",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Tennessee": {
+        "state": "TN",
+        "state_name": "Tennessee",
+        "number_of_diagnosed_hf_patients": "108,729",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Texas": {
+        "state": "TX",
+        "state_name": "Texas",
+        "number_of_diagnosed_hf_patients": "339,467",
+        "percent_of_patients_on_sglt2i":"16"
+    },
+    "Utah": {
+        "state": "UT",
+        "state_name": "Utah",
+        "number_of_diagnosed_hf_patients": "17,306",
+        "percent_of_patients_on_sglt2i":"19"
+    },
+    "Virginia": {
+        "state": "VA",
+        "state_name": "Virginia",
+        "number_of_diagnosed_hf_patients": "73,232",
+        "percent_of_patients_on_sglt2i":"20"
+    },
+    "Virgin_Islands": {
+        "state": "VI",
+        "state_name": "Virgin Islands",
+        "number_of_diagnosed_hf_patients": "29",
+        "percent_of_patients_on_sglt2i":"14"
+    },
+    "Vermont": {
+        "state": "VT",
+        "state_name": "Vermont",
+        "number_of_diagnosed_hf_patients": "2,659",
+        "percent_of_patients_on_sglt2i":"26"
+    },
+    "Washington": {
+        "state": "WA",
+        "state_name": "Washington",
+        "number_of_diagnosed_hf_patients": "45,028",
+        "percent_of_patients_on_sglt2i":"21"
+    },
+    "Wisconsin": {
+        "state": "WI",
+        "state_name": "Wisconsin",
+        "number_of_diagnosed_hf_patients": "43,059",
+        "percent_of_patients_on_sglt2i":"17"
+    },
+    "West_Virginia": {
+        "state": "WV",
+        "state_name": "West Virginia",
+        "number_of_diagnosed_hf_patients": "20,106",
+        "percent_of_patients_on_sglt2i":"23"
+    },
+    "Wyoming": {
+        "state": "WY",
+        "state_name": "Wyoming",
+        "number_of_diagnosed_hf_patients": "4,118",
+        "percent_of_patients_on_sglt2i":"13"
+    }
+}
