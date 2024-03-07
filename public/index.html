@@ -2090,7 +2090,6 @@
         position: relative;
         width: 1920px;
         height: 1080px;
-        font-family: "Avenir Md";
       }
       img.home-static-content {
           position: absolute;
@@ -2289,7 +2288,6 @@
       img.map-header-image1, img.map-header-image2 {
           position: absolute;
           width: 100%;
-          top: -11px;
       }
 
       img.select-state {
@@ -2482,7 +2480,10 @@
     <div class="home">
       <div class="start-screen">
         <div class="start-content">
-          <img class="home-static-content" src="./assets/home_screen.png"/>
+          <img class="home-static-content" src="./assets/home_screen.png" />
+          <!--
+          <img class="map-header-image1" src="./assets/screen_title_1.png" />
+        -->
           <!--- Button to start - delete later 
           <div class="map-n-btn" onclick="activateMap()">
             <img class="littlemap littleMapAnimate" src="./assets/small_map_graphic.png" />
@@ -2494,11 +2495,13 @@
       </div>
       <div class="map">
         <img src="./assets/disclaimer.png" class="disclose hidden"/>
+        <img class="map-header-image1" src="./assets/screen_title_1.png" />
         <div class="upper-text map-up">
 
-          <!-- no used - delete later
-            <img class="map-header-image1 hidden" src="./assets/title_screen_1.png">
-            <img class="map-header-image2" src="./assets/map_screen_title.png"> -->
+          <!-- no used - delete later 
+            <img class="map-header-image1" src="./assets/title_screen_1.png">
+            <img class="map-header-image2" src="./assets/map_screen_title.png"> 
+          -->
         </div>
         <div class="map-header">
           <p class="predictive-ckd hidden">
@@ -2507,9 +2510,8 @@
           <p class="predictive-ckd-low hidden">
             Modelled events have been aligned to the endpoints of DAPA-CKD.
           </p>
-          <h2>CLICK ON YOUR STATE</h2>
+          <h2></h2>
           <p class="nofpatients">
-            to see SGLT2i utilization rates<span>§ </span> in patients diagnosed with HF<span>‖</span>
           </p>
           <p class="ifthey hidden">
             If they were all taking FARXIGA, over 5 years, it is estimated that
@@ -14355,8 +14357,8 @@
             $('g.active').toggleClass('active')
             $(".map-header-image1").toggleClass("hidden")
             $(".map-header-image2").toggleClass("hidden")
-            $(".map-header h2").text('CLICK ON YOUR STATE')
-            $(".map-header .nofpatients").html('to see SGLT2i utilization rates<span>§</span> in patients diagnosed with HF<span>‖</span>')
+            $(".map-header h2").text('')
+            $(".map-header .nofpatients").html('')
             $(".map-up #upper-title")
                 .text("DO YOU KNOW THE RISKS")
                 .removeClass("detail");
