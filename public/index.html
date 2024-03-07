@@ -10,6 +10,10 @@
     <title>Farxiga Interactive Screen</title>
     <style>
       /* GLOBAL */
+      img.map-header-image1{
+            z-index: 1;
+            pointer-events: none;
+        }
       .hidden {
         display: none;
         visibility: hidden;
@@ -50,7 +54,8 @@
         width: 1920px;
         height: 1080px;
         overflow: hidden;
-      }
+        background-image: url('./assets/home_screen.png');     
+       }
       /* ANIMATION ON HOME SCREEN */
       img.startbtn {
         width: 500px;
@@ -2470,6 +2475,10 @@
         bottom: 89px;
         left: 91px;
       }
+      g#INDIVIDUAL_STATES_Full_Map_Master {
+        position: absolute;
+        z-index: 999;
+    }
 
     </style>
   </head>
