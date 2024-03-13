@@ -14222,7 +14222,7 @@
       ////This will write on db.json file everytime the user clicks in an interactive part of the app
       ////r3 will write on the pages array, r2 will buttons on the state array and r1 will write on the stat array
 
-      const socket = io();
+      //const socket = io();
       const sendMess = (mid)=>{
       	if(mid.includes('btn')){
       		let id = mid.slice(0,-3)
@@ -14321,7 +14321,7 @@
           $("#step").addClass("detail-step-left");
           $('.map-header-image1').toggleClass('hidden')
           //$('.map-header-image2').toggleClass('hidden')
-          sendMess(mid)
+          //sendMess(mid)
           //FORMATING DYNAMIC DATA
           let stateData = json[mid];
           let patientsn = stateData.number_of_diagnosed_hf_patients;
@@ -14347,7 +14347,7 @@
       // HIDE AND SHOW FULL SCREEN POPUPS 
       const showPopUp = (t) => {
         $(t).toggleClass("hidden");
-        sendMess('Abbreviations & Referencesbtn')
+        //sendMess('Abbreviations & Referencesbtn')
       };
       const hidePopUp = (m) => {
         $(m).toggleClass("hidden");
@@ -14385,7 +14385,7 @@
 
           }
           $('step').trigger( "click" )
-          sendMess('Home')
+         // sendMess('Home')
         }
       };
       // COUNTER FORM 0 TO N% 
