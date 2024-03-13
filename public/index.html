@@ -14390,14 +14390,14 @@
         }
       };
       // COUNTER FORM 0 TO N% 
-      let interval = 3000;
+      let interval = 700;
       const countUp = (val, target) =>{
         console.log(val, target)
-        let startVal = 0;
+        let startVal = 100;
         let endVal = val
         let duration = Math.floor( interval /endVal )
         let counter = setInterval(function(){
-          startVal += 1;
+          startVal -= 1;
           $(target).text(`${startVal}%`)
           if(startVal == endVal){
             clearInterval(counter)
