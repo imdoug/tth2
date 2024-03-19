@@ -2310,6 +2310,68 @@
         z-index: unset;
         transition: visibility 0ms 3500ms, opacity 3500ms linear;
       }
+      img.select-state.left.visible {
+        visibility: visible!important;
+        opacity: 1!important;
+        z-index: unset;
+        transition: visibility 0ms 3500ms, opacity 3500ms linear;
+      }
+      img.select-state.right.visible {
+        visibility: visible!important;
+        opacity: 1!important;
+        z-index: unset;
+        transition-delay: 1s; /* 2 */
+        transition: delay 1s visibility 0ms 3500ms, opacity 3500ms linear!important;
+      }
+      .greentxt{
+        animation: fadein 5s linear; /* 8s*/
+      }
+      @keyframes fadein {
+        0%{
+          opacity: 0;
+        }
+        15%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+
+      .pulse{
+        animation: 15s ease-out littlemap infinite;
+      }
+
+      @keyframes littlemap {
+        0% {
+        scale: 1;
+      }
+      5% {
+          scale: 0.9;
+      }
+      10% {
+          scale: 1;
+      }
+      15% {
+          scale: 0.9;
+      }
+      20% {
+          scale: 1;
+      }
+      25% {
+          scale: 0.9;
+      }
+      30% {
+          scale: 1.1;
+      }
+      33% {
+          scale: 1;
+      }
+      100% {
+          scale: 1;
+      }
+      }
+
       div#rates.visible{
         visibility: visible!important;
         opacity: 1!important;
@@ -2480,6 +2542,30 @@
         z-index: 999;
     }
 
+    img.home-footnote {
+      position: absolute;
+      width: 440px;
+      top: 510px;
+      left: -67px;
+  }
+  img.map-glow {
+    position: absolute;
+    width: 1357px;
+    left: -88px;
+    top: 0px;
+}
+img.map-glow-notes {
+    position: absolute;
+    width: 318px;
+    top: 207px;
+    left: 609px;
+}
+img.map-glow-button {
+    position: absolute;
+    width: 580px;
+    left: 479px;
+    top: 499px;
+}
     </style>
   </head>
   <body style="margin: 0; padding: 0">
@@ -2490,6 +2576,12 @@
       <div class="start-screen">
         <div class="start-content">
           <img class="home-static-content" src="./assets/home_screen.png" />
+
+
+          <img class="home-footnote" src="assets/attract-map-footnotes.png"/>
+          <img class="map-glow pulse" src="assets/map with glow.png"/>
+          <img class="map-glow-notes pulse" src="assets/copy.png"/>
+          <img class="map-glow-button pulse" onclick="activateMap()" src="assets/Attract Button.png"/>
           <!--
           <img class="map-header-image1" src="./assets/screen_title_1.png" />
         -->
@@ -2502,7 +2594,7 @@
         -->
         </div>
       </div>
-      <div class="map">
+      <div class="map hidden">
         <img class="map-header-image1" src="./assets/screen_title_1.png" />
         <div class="upper-text map-up">
 
@@ -14147,7 +14239,9 @@
           <use xlink:href="#New_York" ></use>
         </svg>
         <!-- SVG  END  -->
-        <img class="select-state" src="./assets/state_screen_1.png"/>
+        <img class="select-state left" src="./assets/State_gray_panel_in_position.png"/>
+        <img class="select-state right" src="./assets/State_green_panel_in_position.png"/>
+        <img class="select-state" src="./assets/StatePageFootnotesPositoinednew.png"/>
         <!-- not used - delete later 
           <div id="seeTheDiference" class="state-active-buttons hidden" onclick="seeTheDiference()"> 
             -->
@@ -14216,6 +14310,10 @@
         $("#step").removeClass("home-step");
         $("#step").addClass("map-step");
         $('.visible').removeClass('visible')
+        $('.map-glow').toggleClass('hidden')
+        $('.home-footnote').toggleClass('hidden')
+        $('.map-glow-notes').toggleClass('hidden')
+        $('.map-glow-button').toggleClass('hidden')
         //sendMess('Startbtn')
       };
       //// UNCOMMENT THE sendMess FUNCTIONS WHEN YOU MAKE THE ZIP FOR PROD, OTHERWISE IT WONT RECORD THE CLICKS
@@ -14330,7 +14428,7 @@
           $(".map-header .nofpatients").html(`${patientsn} patients diagnosed with HF<span>§</span>`).addClass('active');
           $(".only-line").html(
             `FOR THE ${100 - stateData.percent_of_patients_on_sglt2i}%<br>OF PATIENTS`
-          );
+          ).addClass('greentxt');
           //READMISSION AND MORTALITY
           countUp(stateData.percent_of_patients_on_sglt2i, '.read-rate')
           //countUp(stateData.percent_mortality, '.mort-rate')
@@ -14375,13 +14473,38 @@
                 .removeClass("detail");
             $('.select-state').removeClass('visible')
             $('.nofpatients').toggleClass('active')
+            $("#step").removeClass("detail-step-left")
+            $("#step").addClass("home-step")
+            $(".start-content").toggleClass('hidden')
+            $(".greentxt").removeClass("greentxt")
+
+          }
+          if ($("#step").hasClass("map-step")){
+            $('.start-content').toggleClass('hidden')
+            $(".map").toggleClass("hidden");
+            $("body").toggleClass("map-view");
+            $(".map-header h2").text('')
+            $(".map-header .nofpatients").html('')
+            $(".map-up #upper-title")
+                .text("DO YOU KNOW THE RISKS")
+                .removeClass("detail");
+            $(".map-up #upper-subtitle")
+                .text("patients with HF face in your state?")
+                .removeClass("detail");
+            $('.select-state').removeClass('visible')
+            $('.nofpatients').toggleClass('active')
             $('#rates').toggleClass('visible')
             $('#sqr-bb-content').toggleClass('visible')
             $("#step").removeClass("detail-step-left")
             $("#step").addClass("home-step")
+            $('.map-glow').toggleClass('hidden')
+            $('.home-footnote').toggleClass('hidden')
+            $('.map-glow-notes').toggleClass('hidden')
+            $('.map-glow-button').toggleClass('hidden')
+
           }
           // IF USER IS IN THE STATE SELECTION(MAP) SCREEN 
-          else{
+          else{f
 
           }
           $('step').trigger( "click" )
@@ -14389,14 +14512,14 @@
         }
       };
       // COUNTER FORM 0 TO N% 
-      let interval = 700;
+      let interval = 3000;
       const countUp = (val, target) =>{
         console.log(val, target)
-        let startVal = 100;
+        let startVal = 0;
         let endVal = val
         let duration = Math.floor( interval /endVal )
         let counter = setInterval(function(){
-          startVal -= 1;
+          startVal += 1;
           $(target).text(`${startVal}%`)
           if(startVal == endVal){
             clearInterval(counter)
