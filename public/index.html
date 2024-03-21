@@ -14471,7 +14471,7 @@ img.map-glow-button {
             //IF USER IS ON THE DETAIL SCREEN 
           if ($("#step").hasClass("detail-step-left")){
             $('.start-content').toggleClass('hidden')
-            //$(".map").toggleClass("hidden");
+            $(".map").removeClass("hidden");
             $("body").toggleClass("map-view");
             $(".home").toggleClass("bottom");
             $('g.fade').toggleClass('fade')
@@ -14488,38 +14488,42 @@ img.map-glow-button {
                 .removeClass("detail");
             $('.select-state').removeClass('visible')
             $('.nofpatients').toggleClass('active')
-            $("#step").removeClass("detail-step-left")
-            $("#step").addClass("home-step")
-            $(".start-content").toggleClass('hidden')
-            $(".greentxt").removeClass("greentxt")
-
-          }
-          if ($("#step").hasClass("map-step")){
-            $('.start-content').toggleClass('hidden')
-            $(".map").toggleClass("hidden");
-            $("body").toggleClass("map-view");
-            $(".map-header h2").text('')
-            $(".map-header .nofpatients").html('')
-            $(".map-up #upper-title")
-                .text("DO YOU KNOW THE RISKS")
-                .removeClass("detail");
-            $(".map-up #upper-subtitle")
-                .text("patients with HF face in your state?")
-                .removeClass("detail");
-            $('.select-state').removeClass('visible')
-            $('.nofpatients').toggleClass('active')
             $('#rates').removeClass('visible')
             $('#sqr-bb-content').removeClass('visible')
-            $("#step").removeClass("detail-step-left")
-            $("#step").addClass("home-step")
-            $('.map-glow').toggleClass('hidden')
-            $('.home-footnote').toggleClass('hidden')
-            $('.map-glow-notes').toggleClass('hidden')
-            $('.map-glow-button').toggleClass('hidden')
+            $(".greentxt").removeClass("greentxt")
+            $("#step").removeClass('detail-step-left')
+            
+            //$("#step").removeClass("detail-step-left")
+            //$("#step").addClass("home-step")
+            //$(".start-content").toggleClass('hidden')
+            //$(".greentxt").removeClass("greentxt")
 
           }
+          //if ($("#step").hasClass("map-step")){
+            //$('.start-content').toggleClass('hidden')
+            //$(".map").toggleClass("hidden");
+            //$("body").toggleClass("map-view");
+            //$(".map-header h2").text('')
+            //$(".map-header .nofpatients").html('')
+            //$(".map-up #upper-title")
+              //  .text("DO YOU KNOW THE RISKS")
+              //  .removeClass("detail");
+            //$(".map-up #upper-subtitle")
+              //  .text("patients with HF face in your state?")
+              //  .removeClass("detail");
+            //$('.select-state').removeClass('visible')
+            //$('.nofpatients').toggleClass('active')
+            //$('#rates').removeClass('visible')
+            //$('#sqr-bb-content').removeClass('visible')
+            //$("#step").removeClass("detail-step-left")
+            //$("#step").addClass("home-step")
+            //$('.map-glow').toggleClass('hidden')
+            //$('.home-footnote').toggleClass('hidden')
+            //$('.map-glow-notes').toggleClass('hidden')
+            //$('.map-glow-button').toggleClass('hidden')
+          //}
           // IF USER IS IN THE STATE SELECTION(MAP) SCREEN 
-          else{f
+          else{
 
           }
           $('step').trigger( "click" )
@@ -14529,7 +14533,7 @@ img.map-glow-button {
       // COUNTER FORM 0 TO N% 
       let interval = 3000;
       const countUp = (val, target) =>{
-        console.log(val, target)
+        //console.log(val, target)
         let startVal = 0;
         let endVal = val
         let duration = Math.floor( interval /endVal )
@@ -14557,8 +14561,30 @@ img.map-glow-button {
            // function you want to fire when the user goes idle
          $('.map').on( "idle.idleTimer", function(event, elem, obj){
              if(!$("#step").hasClass("home-step")){
+              if($("#step").hasClass("map-step")){
+                $(".map").addClass("hidden");
+                $("#step").removeClass("map-step")
+                $("#step").addClass("home-step")
+                $(".start-content").removeClass('hidden')
+                $(".greentxt").removeClass("greentxt")
+                $(".home-footnote").removeClass("hidden")
+                $(".map-glow-notes").removeClass("hidden")
+                $(".map-glow").removeClass("hidden")
+                $(".map-glow-button").removeClass("hidden")
+                console.log('idle on map')
+              }
+              if($("#step").hasClass("detail-step-left")){
+                $('#rates').removeClass('visible')
+                $('#sqr-bb-content').removeClass('visible')
+                $(".greentxt").removeClass("greentxt")
+                $('g.fade').toggleClass('fade')
+                $('g.active').toggleClass('active')
+                $(".map-header-image1").toggleClass("hidden")
+                $(".map-header-image2").toggleClass("hidden")
+                $(".map-header h2").text('')
+                $(".map-header .nofpatients").html('')
+              }
                reset()
-               console.log('idle runing outside the home screen ')
              }
            });
 
