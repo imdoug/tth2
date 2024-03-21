@@ -55,6 +55,8 @@
         height: 1080px;
         overflow: hidden;
         background-image: url('./assets/home_screen.png');     
+        background-repeat: no-repeat;
+        background-size: contain;
        }
       /* ANIMATION ON HOME SCREEN */
       img.startbtn {
@@ -291,7 +293,7 @@
           visibility: visible!important;
           opacity: 1!important;
        }
-       
+
        #Alaska.active {
         visibility: initial;
         opacity: 1;
@@ -2084,7 +2086,7 @@
 
       /*SCREEN VIEW*/
       .home {
-        background-image: url("./assets/home_screen.png");
+       /* background-image: url("./assets/home_screen.png");*/
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
@@ -14506,8 +14508,8 @@ img.map-glow-button {
                 .removeClass("detail");
             $('.select-state').removeClass('visible')
             $('.nofpatients').toggleClass('active')
-            $('#rates').toggleClass('visible')
-            $('#sqr-bb-content').toggleClass('visible')
+            $('#rates').removeClass('visible')
+            $('#sqr-bb-content').removeClass('visible')
             $("#step").removeClass("detail-step-left")
             $("#step").addClass("home-step")
             $('.map-glow').toggleClass('hidden')
