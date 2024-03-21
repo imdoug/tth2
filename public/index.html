@@ -2330,17 +2330,17 @@
         visibility: visible!important;
         opacity: 1!important;
         z-index: unset;
-        transition-delay: 1s; /* 2 */
-        transition: delay 1s visibility 0ms 3500ms, opacity 3500ms linear!important;
+        transition-delay: 3s; /* 2 */
+        transition: delay 3s visibility 0ms 3500ms, opacity 3500ms linear!important;
       }
       .greentxt{
-        animation: fadein 5s linear; /* 8s*/
+        animation: fadein 9.5s linear; /* 8s*/
       }
       @keyframes fadein {
         0%{
           opacity: 0;
         }
-        15%{
+        30%{
           opacity: 0;
         }
         100%{
@@ -2349,7 +2349,7 @@
       }
 
       .pulse{
-        animation: 20s ease-out littlemap infinite;
+        animation: 15s ease-out littlemap infinite;
       }
 
       @keyframes littlemap {
@@ -2380,6 +2380,17 @@
       100% {
           scale: 1;
       }
+      }
+      @keyframes home-fade {
+        0%{
+          opacity: 0;
+        }
+        45%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 1;
+        }
       }
 
       div#rates.visible{
@@ -2567,6 +2578,7 @@ img.map-header-image1.ft {
     width: 1357px;
     left: -88px;
     top: 0px;
+    animation: home-fade 15s linear infinite;
 }
 img.map-glow-notes {
     position: absolute;
@@ -2580,6 +2592,61 @@ img.map-glow-button {
     left: 479px;
     top: 499px;
 }
+/*   BEAM OF LIGHT ?*/
+
+.switch::before{
+  content: '';
+  position: inherit;
+  background-color: rgba(255, 255,255, 0.3);
+  height: 200px;
+  width: 60px;
+  left: -80px;
+  transform: skew(-30deg);
+}
+.switch:hover::before{
+ animation: slide 1s;
+}
+@keyframes slide {
+  0%, 100%{
+    left: -80px;
+  }
+  50%{
+    left: 100%;
+  }
+}
+.gleam-container{
+            height: 561px;
+            width: 1256.86px;
+            position: absolute;
+            overflow: hidden;
+            bottom: 136px;
+            left: 268px;
+            display: none;
+        }
+        .gleam-container.active{
+          display: block!important;
+        }
+        .gleam-container::before{
+            content: '';
+            position: absolute;
+            background-color: rgba(255, 255,255, 0.3);
+            height: 561px;/*  561 */
+            width: 60px; 
+            left: -230px;
+            transform: skew(-30deg);
+        }
+        .gleam-container.active::before{
+            animation: slide 1.5s;
+        }
+        @keyframes slide {
+            0%{
+                left: -230px;
+            }
+            100%{
+                left: 120%;
+            }
+        }
+
     </style>
   </head>
   <body style="margin: 0; padding: 0">
@@ -2593,8 +2660,9 @@ img.map-glow-button {
 
 
           <img class="home-footnote" src="assets/attract-map-footnotes.png"/>
-          <img class="map-glow pulse" src="assets/map with glow.png"/>
-          <img class="map-glow-notes pulse" src="assets/copy.png"/>
+          <img class="map-glow " src="assets/map with glow.png"/>
+          <img class="fixed-map hidden" src="assets/attractMapoutline.png"/>
+          <img class="map-glow-notes " src="assets/copy.png"/>
           <img class="map-glow-button pulse" onclick="activateMap()" src="assets/Attract Button.png"/>
           <!--
           <img class="map-header-image1" src="./assets/screen_title_1.png" />
@@ -14253,6 +14321,7 @@ img.map-glow-button {
           </i:aipgf>
           <use xlink:href="#New_York" ></use>
         </svg>
+        <div class="gleam-container"></div>
         <!-- SVG  END  -->
         <img class="select-state left" src="./assets/State_gray_panel_in_position.png"/>
         <img class="select-state right" src="./assets/State_green_panel_in_position.png"/>
@@ -14329,6 +14398,10 @@ img.map-glow-button {
         $('.home-footnote').toggleClass('hidden')
         $('.map-glow-notes').toggleClass('hidden')
         $('.map-glow-button').toggleClass('hidden')
+        $(".gleam-container").addClass('active')
+        setTimeout(() => {
+          $(".gleam-container").removeClass('active')
+        }, 1500);
         //sendMess('Startbtn')
       };
       //// UNCOMMENT THE sendMess FUNCTIONS WHEN YOU MAKE THE ZIP FOR PROD, OTHERWISE IT WONT RECORD THE CLICKS
