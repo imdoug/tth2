@@ -68,8 +68,8 @@
     "Hawaii": {
         "state": "HI",
         "state_name": "Hawaii",
-        "number_of_diagnosed_hf_patients": "11,231",
-        "percent_of_patients_on_sglt2i":"13"
+        "number_of_diagnosed_hf_patients": "11,368",
+        "percent_of_patients_on_sglt2i":"23"
     },
     "Iowa": {
         "state": "IA",
@@ -80,7 +80,7 @@
     "Idaho": {
         "state": "ID",
         "state_name": "Idaho",
-        "number_of_diagnosed_hf_patients": "932",
+        "number_of_diagnosed_hf_patients": "9,632",
         "percent_of_patients_on_sglt2i":"22"
     },
     "Illinois": {
