@@ -2596,27 +2596,6 @@ img.fixed-map {
     top: -200px;
 }
 /*   BEAM OF LIGHT ?*/
-
-.switch::before{
-  content: '';
-  position: inherit;
-  background-color: rgba(255, 255,255, 0.3);
-  height: 200px;
-  width: 60px;
-  left: -80px;
-  transform: skew(-30deg);
-}
-.switch:hover::before{
- animation: slide 1s;
-}
-@keyframes slide {
-  0%, 100%{
-    left: -80px;
-  }
-  50%{
-    left: 100%;
-  }
-}
 .gleam-container{
             height: 561px;
             width: 1256.86px;
@@ -2624,10 +2603,9 @@ img.fixed-map {
             overflow: hidden;
             bottom: 136px;
             left: 268px;
-            display: none;
         }
         .gleam-container.active{
-          display: block!important;
+          pointer-events: none!important;
         }
         .gleam-container::before{
             content: '';
@@ -2639,14 +2617,14 @@ img.fixed-map {
             transform: skew(-30deg);
         }
         .gleam-container.active::before{
-            animation: slide 1.5s;
+            animation: slide 10s infinite;
         }
         @keyframes slide {
-            0%{
+            0%, 100%{
                 left: -230px;
             }
-            100%{
-                left: 120%;
+            50%{
+                left: 110%;
             }
         }
 
@@ -14398,13 +14376,14 @@ img.fixed-map {
         $("#step").addClass("map-step");
         $('.visible').removeClass('visible')
         $('.map-glow').toggleClass('hidden')
+        $('.fixed-map').toggleClass('hidden')
         $('.home-footnote').toggleClass('hidden')
         $('.map-glow-notes').toggleClass('hidden')
         $('.map-glow-button').toggleClass('hidden')
         $(".gleam-container").addClass('active')
-        setTimeout(() => {
-          $(".gleam-container").removeClass('active')
-        }, 1500);
+      //  setTimeout(() => {
+      //   $(".gleam-container").removeClass('active')
+      // }, 6000);
         //sendMess('Startbtn')
       };
       //// UNCOMMENT THE sendMess FUNCTIONS WHEN YOU MAKE THE ZIP FOR PROD, OTHERWISE IT WONT RECORD THE CLICKS
@@ -14645,6 +14624,7 @@ img.fixed-map {
                 $(".greentxt").removeClass("greentxt")
                 $(".home-footnote").removeClass("hidden")
                 $(".map-glow-notes").removeClass("hidden")
+                $(".fixed-map").removeClass("hidden")
                 $(".map-glow").removeClass("hidden")
                 $(".map-glow-button").removeClass("hidden")
                 console.log('idle on map')
