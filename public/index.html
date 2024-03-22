@@ -2349,32 +2349,32 @@
       }
 
       .pulse{
-        animation: 15s ease-out littlemap infinite;
+        animation: 20s ease-out littlemap infinite;
       }
 
       @keyframes littlemap {
         0% {
         scale: 1;
       }
-      7% {
+      5% {
           scale: 0.9;
       }
-      14% {
+      10% {
           scale: 1;
       }
-      21% {
+      15% {
           scale: 0.9;
       }
-      28% {
+      20% {
           scale: 1;
       }
-      35% {
+      25% {
           scale: 0.9;
       }
-      42% {
+      30% {
           scale: 1.1;
       }
-      45% {
+      35% {
           scale: 1;
       }
       100% {
@@ -2382,13 +2382,10 @@
       }
       }
       @keyframes home-fade {
-        0%{
+        0%, 100%{
           opacity: 0;
         }
-        45%{
-          opacity: 1;
-        }
-        100%{
+        50%{
           opacity: 1;
         }
       }
@@ -2575,10 +2572,10 @@ img.map-header-image1.ft {
 }
   img.map-glow {
     position: absolute;
-    width: 1357px;
-    left: -88px;
-    top: 0px;
-    animation: home-fade 15s linear infinite;
+    width: 118%;
+    left: -118px;
+    top: -200px;
+    animation: home-fade 5s linear infinite;
 }
 img.map-glow-notes {
     position: absolute;
@@ -2591,6 +2588,12 @@ img.map-glow-button {
     width: 580px;
     left: 479px;
     top: 499px;
+}
+img.fixed-map {
+    position: absolute;
+    width: 118%;
+    left: -118px;
+    top: -200px;
 }
 /*   BEAM OF LIGHT ?*/
 
@@ -2661,7 +2664,7 @@ img.map-glow-button {
 
           <img class="home-footnote" src="assets/attract-map-footnotes.png"/>
           <img class="map-glow " src="assets/map with glow.png"/>
-          <img class="fixed-map hidden" src="assets/attractMapoutline.png"/>
+          <img class="fixed-map" src="assets/AttractMapOutline3.png"/>
           <img class="map-glow-notes " src="assets/copy.png"/>
           <img class="map-glow-button pulse" onclick="activateMap()" src="assets/Attract Button.png"/>
           <!--
