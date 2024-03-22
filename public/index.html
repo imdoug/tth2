@@ -2617,7 +2617,7 @@ img.fixed-map {
             transform: skew(-30deg);
         }
         .gleam-container.active::before{
-            animation: slide 10s infinite;
+            animation: slide 8s infinite;
         }
         @keyframes slide {
             0%, 100%{
@@ -14547,6 +14547,7 @@ img.fixed-map {
             $('#sqr-bb-content').removeClass('visible')
             $(".greentxt").removeClass("greentxt")
             $("#step").removeClass('detail-step-left')
+            $(".gleam-container").addClass('hidden')
             
             //$("#step").removeClass("detail-step-left")
             //$("#step").addClass("home-step")
@@ -14641,6 +14642,10 @@ img.fixed-map {
                 $(".map-header .nofpatients").html('')
               }
                reset()
+               $(".gleam-container").removeClass('hidden')
+               if(!$(".references-popup").hasClass("hidden")){
+                $(".references-popup").toggleClass("hidden")
+               }
              }
            });
 
