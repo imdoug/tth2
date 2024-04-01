@@ -2548,13 +2548,16 @@
 
     img.home-footnote {
     position: absolute;
-    width: 1920px;
-    top: -227px;
-    left: -210px;
+    bottom: -716px;
+    left: -104px;
+    width: 867px;
+    z-index: 9;
 }
-img.map-header-image1.ft {
-    top: 18px;
-    left: -20px;
+img.map-header-image2.ft {
+    bottom: 119px;
+    left: 86px;
+    width: 867px;
+    z-index: 9;
 }
   img.map-glow {
     position: absolute;
@@ -2645,7 +2648,7 @@ img.fixed-map {
       </div>
       <div class="map hidden">
         <img class="map-header-image1" src="./assets/screen_title_1.png" />
-        <img class="map-header-image1 ft" src="./assets/attract-map-footnotes.png" />
+        <img class="map-header-image2 ft" src="./assets/attract-map-footnotes.png" />
         <div class="upper-text map-up">
 
           <!-- no used - delete later 
@@ -14292,7 +14295,7 @@ img.fixed-map {
         <!-- SVG  END  -->
         <img class="select-state left" src="./assets/State_gray_panel_in_position.png"/>
         <img class="select-state right" src="./assets/State_green_panel_in_position.png"/>
-        <img class="select-state" src="./assets/StatePageFootnotesPositoinednew.png"/>
+        <!--<img class="select-state" src="./assets/StatePageFootnotesPositoinednew.png"/>-->
         <!-- not used - delete later 
           <div id="seeTheDiference" class="state-active-buttons hidden" onclick="seeTheDiference()"> 
             -->
@@ -14367,9 +14370,6 @@ img.fixed-map {
         $('.map-glow-notes').toggleClass('hidden')
         $('.map-glow-button').toggleClass('hidden')
         $(".gleam-container").addClass('active')
-      //  setTimeout(() => {
-      //   $(".gleam-container").removeClass('active')
-      // }, 6000);
         //sendMess('Startbtn')
       };
       //// UNCOMMENT THE sendMess FUNCTIONS WHEN YOU MAKE THE ZIP FOR PROD, OTHERWISE IT WONT RECORD THE CLICKS
@@ -14522,7 +14522,6 @@ img.fixed-map {
             $('g.fade').toggleClass('fade')
             $('g.active').toggleClass('active')
             $(".map-header-image1").toggleClass("hidden")
-            $(".map-header-image2").toggleClass("hidden")
             $(".map-header h2").text('')
             $(".map-header .nofpatients").html('')
             $(".map-up #upper-title")
@@ -14544,7 +14543,7 @@ img.fixed-map {
 
           }
           $('step').trigger( "click" )
-         // sendMess('Home')
+          //sendMess('Home')
         }
       };
       // COUNTER FORM 0 TO N% 
