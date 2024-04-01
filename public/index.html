@@ -14484,7 +14484,7 @@ img.fixed-map {
           let patientsn = stateData.number_of_diagnosed_hf_patients;
           // ADDING THE DYNAMIC DATA TO THE DOM
           $(".map-header h2").text(stateData.state_name);
-          $(".map-header .nofpatients").html(`${patientsn} patients diagnosed with HF<span>§</span>`).addClass('active');
+          $(".map-header .nofpatients").html(`${patientsn} patients diagnosed with HF<span>‡</span>`).addClass('active');
           $(".only-line").html(
             `FOR THE ${100 - stateData.percent_of_patients_on_sglt2i}%<br>OF PATIENTS`
           ).addClass('greentxt');
