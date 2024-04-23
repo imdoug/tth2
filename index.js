@@ -36,7 +36,7 @@ io.on("connect", (socket)=>{
                   if(err){
                         console.log(err)
                   }else{
-                        data.clicks.states.push(obj)
+                        data.clicks.buttons.push(obj)
                         fs.writeFile('./db.json', JSON.stringify(data), err =>{
                               if(err){
                                     console.log(err)

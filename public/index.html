@@ -14370,7 +14370,7 @@ img.fixed-map {
         $('.map-glow-notes').toggleClass('hidden')
         $('.map-glow-button').toggleClass('hidden')
         $(".gleam-container").addClass('active')
-        //sendMess('Startbtn')
+        sendMess('Startbtn')
       };
       //// UNCOMMENT THE sendMess FUNCTIONS WHEN YOU MAKE THE ZIP FOR PROD, OTHERWISE IT WONT RECORD THE CLICKS
       ////This will write on db.json file everytime the user clicks in an interactive part of the app
@@ -14395,9 +14395,9 @@ img.fixed-map {
       		console.log(0,id)
       		socket.emit("r2", { button: id,timeStamp: String(date) })
       	}else{
-      		let id = json[mid].state
+      		let id = json[mid].state_name
       		const date = new Date()
-      		socket.emit("r1", { state: id,timeStamp: String(date) })
+      		socket.emit("r1", { button: id,timeStamp: String(date) })
       	}
       }
       let states = [
@@ -14478,7 +14478,7 @@ img.fixed-map {
           $(".gleam-container").removeClass('active')
 
           //$('.map-header-image2').toggleClass('hidden')
-          //sendMess(mid)
+          sendMess(mid)
           //FORMATING DYNAMIC DATA
           let stateData = json[mid];
           let patientsn = stateData.number_of_diagnosed_hf_patients;
@@ -14504,7 +14504,7 @@ img.fixed-map {
       // HIDE AND SHOW FULL SCREEN POPUPS 
       const showPopUp = (t) => {
         $(t).toggleClass("hidden");
-        //sendMess('Abbreviations & Referencesbtn')
+        sendMess('Abbreviations & Referencesbtn')
       };
       const hidePopUp = (m) => {
         $(m).toggleClass("hidden");
@@ -14543,7 +14543,7 @@ img.fixed-map {
 
           }
           $('step').trigger( "click" )
-          //sendMess('Home')
+          sendMess('Home')
         }
       };
       // COUNTER FORM 0 TO N% 
